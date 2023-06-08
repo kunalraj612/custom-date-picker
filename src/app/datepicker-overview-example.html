@@ -1,0 +1,16 @@
+<h1>{{ title }}</h1>
+<div class="container">
+  <label class="date">
+    {{ label }}
+    <input #datelabel type="text" [class.error]="error" [placeholder]="placeholder"
+      (change)="valiDate($event.target.value)" (blur)="valiDate($event.target.value)" />
+    <!-- <button (click)="buttonClick()"></button>
+    <input #datepicker type="date" (change)="changeHandler($event.target.value)" /> -->
+    <button (click)="buttonClick()">O</button>
+    <input #datepicker id="datepicker" type="date" (change)="changeHandler($event.target.value)" />
+
+
+    
+    <span class="error" *ngIf="error">{{ errormsg }}</span>
+  </label>
+</div>

@@ -1,0 +1,82 @@
+/** No CSS for this example */
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 300px;
+}
+
+label.date {
+  display: block;
+  position: relative;
+  text-align: left;
+  font-weight: bold;
+}
+
+.date > input[type="date"] {
+  display: block;
+  position: absolute;
+  visibility: hidden;
+  bottom: 0px;
+  left: 1px;
+  cursor: pointer;
+}
+
+.date > input[type="text"] {
+  display: block;
+  position: relative;
+  color: #000;
+  font-family: 'Fidelity Sans', fidelity-sans, system-ui, sans-serif;
+  margin-top: 8px;
+  padding: 8px 16px;
+  border-radius: 3px;
+  border: 1px solid #7f7f7f;
+  width: 100%;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.date > input[type="text"]:hover {
+  border: 1px solid #fff;
+  box-shadow: 0 0 0 2px #7f7f7f;
+}
+
+.date > input[type="text"]:focus {
+  border: 1px solid #fff;
+  box-shadow: 0 0 0 2px #000;
+  outline: 0;
+}
+
+.date > input[type="text"].error {
+  border: 1px solid #e01616;
+}
+
+.date > input[type="text"].error:hover,
+.date > input[type="text"].error:focus {
+  border: 1px solid #e01616;
+  box-shadow: 0 0 0 1px #e01616;
+}
+
+label.date button {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 0px;
+  margin-top: -38px;
+  background: none;
+  /* background-image: url('./calendar-alt.svg'); */
+  background-repeat: no-repeat;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  box-sizing: content-box;
+  border: 6px solid transparent;
+  border-top-width: 7px;
+  border-bottom-width: 7px;
+  border-radius: 3px;
+}
